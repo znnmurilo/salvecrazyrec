@@ -1,4 +1,5 @@
-<html class="scroll-smooth" lang="pt-BR" style="scroll-behavior:smooth;">
+<!DOCTYPE html>
+<html lang="pt-BR" style="scroll-behavior:smooth;">
 
 <head>
     <meta charset="utf-8" />
@@ -36,30 +37,28 @@
 
         /* Transparent glass effect */
         .glass {
-            background: rgba(255 255 255 / 0.1);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: saturate(180%) blur(10px);
-            -webkit-backdrop-filter: saturate(180%) blur(10px);
-            border: 1px solid rgba(255 255 255 / 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .glass:hover {
-            background: rgba(255 255 255 / 0.15);
-            border-color: rgba(255 255 255 / 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
         /* Button with subtle glow and smooth scale */
         .btn-glow {
-            background: rgba(255 255 255 / 0.1);
+            background: rgba(255, 255, 255, 0.1);
             border: 2px solid #ffffff;
             color: #ffffff;
             font-weight: 700;
             padding: 0.75rem 1.75rem;
             border-radius: 9999px;
-            box-shadow: 0 0 8px rgba(255 255 255 / 0.3);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
             backdrop-filter: saturate(180%) blur(8px);
-            -webkit-backdrop-filter: saturate(180%) blur(8px);
             cursor: pointer;
             user-select: none;
             display: inline-block;
@@ -71,8 +70,8 @@
 
         .btn-glow:hover,
         .btn-glow:focus {
-            background: rgba(255 255 255 / 0.25);
-            box-shadow: 0 0 20px rgba(255 255 255 / 0.6);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
             color: #e2e8f0;
             transform: scale(1.05);
             outline: none;
@@ -87,54 +86,6 @@
         #mobile-menu {
             transition: max-height 0.4s ease;
             overflow: hidden;
-        }
-
-        /* Chain overlay container */
-        .chain-overlay {
-            position: fixed;
-            pointer-events: none;
-            z-index: 50;
-            user-select: none;
-            mix-blend-mode: screen;
-            transition: opacity 0.5s ease;
-        }
-
-        .chain-overlay.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .chain-image {
-            position: absolute;
-            will-change: transform, opacity;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            cursor: default;
-            user-select: none;
-        }
-
-        .chain-image:hover {
-            transform: translate(calc(var(--random-x, 0) * 20px), calc(var(--random-y, 0) * 20px)) scale(1.05);
-            opacity: 0.3;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-
-        /* Responsive text sizes */
-        @media (max-width: 768px) {
-
-            h2,
-            h3,
-            h4 {
-                font-size: clamp(1.5rem, 4vw, 2rem);
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            h2,
-            h3,
-            h4 {
-                font-size: clamp(1.25rem, 5vw, 1.75rem);
-            }
         }
 
         /* Carousel styles */
@@ -155,8 +106,8 @@
             margin-right: 1rem;
             border-radius: 1rem;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(255 255 255 / 0.2);
-            background: rgba(255 255 255 / 0.05);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
             cursor: pointer;
             transition: transform 0.3s ease;
         }
@@ -171,10 +122,10 @@
 
         #artist-carousel .slide img {
             width: 100%;
-            height: 220px;
+            height: auto;
             object-fit: cover;
             display: block;
-            border-bottom: 2px solid rgba(255 255 255 / 0.2);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
         }
 
         #artist-carousel .slide .caption {
@@ -213,24 +164,35 @@
             right: 0.5rem;
         }
 
+        /* Responsive text sizes */
         @media (max-width: 768px) {
+
+            h2,
+            h3,
+            h4 {
+                font-size: clamp(1.5rem, 4vw, 2rem);
+            }
+
             #artist-carousel .slide {
                 flex: 0 0 calc(50% - 1rem);
             }
 
             #artist-carousel .slide img {
-                height: 180px;
+                height: auto;
             }
         }
 
         @media (max-width: 480px) {
+
+            h2,
+            h3,
+            h4 {
+                font-size: clamp(1.25rem, 5vw, 1.75rem);
+            }
+
             #artist-carousel .slide {
                 flex: 0 0 100%;
                 margin-right: 0;
-            }
-
-            #artist-carousel .slide img {
-                height: 220px;
             }
 
             #artist-carousel button.carousel-btn {
@@ -238,22 +200,11 @@
             }
         }
     </style>
-</head>
+
+
+
 
 <body class="flex flex-col min-h-screen bg-black text-white">
-    <!-- Chain overlays -->
-    <img alt="Corrente decorativa 1" class="chain-overlay chain-image" id="chain1"
-        src="https://media.discordapp.net/attachments/1353185480199377029/1365400600505749614/Corrente_nextpack_19.png?ex=680d2be7&is=680bda67&hm=71a2c263ae79750ff5f51f2420ea68d4341adf48d6727d3ae2025c3251dbc488&=&width=1584&height=891"
-        style="--random-x: 0.3; --random-y: -0.4; top: 10vh; left: 5vw; width: 11280px; opacity: 0.7;" />
-    <img alt="Corrente decorativa 2" class="chain-overlay chain-image" id="chain2"
-        src="https://media.discordapp.net/attachments/1353185480199377029/1365400594625331282/Corrente_nextpack_2.png?ex=680d2be5&is=680bda65&hm=d8d234c76fbb5940a6793e9a28205d17a866b8d49892a524aa3e3fc8bae963c5&=&width=1584&height=891"
-        style="--random-x: -0.5; --random-y: 0.2; top: 40vh; right: 8vw; width: 11280px; opacity: 0.6;" />
-    <img alt="Corrente decorativa 3" class="chain-overlay chain-image" id="chain3"
-        src="https://media.discordapp.net/attachments/1353185480199377029/1365400597658075228/Corrente_nextpack_5.png?ex=680d2be6&is=680bda66&hm=5e48a562ee1cc3a2eaaa103c38931abe044bac95252a33cb3b7336dcc6487c43&=&width=1584&height=891"
-        style="--random-x: 0.1; --random-y: 0.5; bottom: 15vh; left: 12vw; width: 11280px; opacity: 0.65;" />
-    <img alt="Corrente decorativa 4" class="chain-overlay chain-image" id="chain4"
-        src="https://media.discordapp.net/attachments/1353185480199377029/1365400591916073001/Corrente_nextpack_1.png?ex=680d2be5&is=680bda65&hm=17f525ba5596f2e412f751f82a0b1136812b0a46f3863fe35d13bad2ac7b19b0&=&width=1584&height=891"
-        style="--random-x: -0.3; --random-y: -0.3; bottom: 10vh; right: 10vw; width: 11280px; opacity: 0.7;" />
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 bg-black bg-opacity-70 backdrop-blur-md z-50 shadow-lg glass">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
@@ -272,7 +223,7 @@
                     <li><a class="hover:text-gray-400" href="#lancamentos">Lançamentos</a></li>
                     <li><a class="hover:text-gray-400" href="#shows">Shows</a></li>
                     <li><a class="hover:text-gray-400" href="#noticias">Central De Fãs</a></li>
-                    <li><a class="block hover:text-gray-400" href="https://salvecrazy.com">Merch</a></li>
+                    <li <a class="block hover:text-gray-400" href="https://salvecrazy.com">Merch</a></li>
                     <li><a class="hover:text-gray-400" href="#contato">Contato</a></li>
                 </ul>
                 <button aria-expanded="false" aria-label="Abrir menu"
@@ -328,7 +279,7 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-10 sm:p-16 rounded-xl">
                             <h1
-                                class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white drop-shadow-lg max-w-4xl tracking-wide">
+                                class="text-5xl sm:text- 6xl md:text-7xl font-extrabold text-white drop-shadow-lg max-w-4xl tracking-wide">
                                 Ryu, The Runner em Porto Alegre
                             </h1>
                             <p class="mt-6 text-xl sm:text-2xl text-gray-300 max-w-3xl drop-shadow-md font-sans">
@@ -396,7 +347,7 @@
                         </div>
                         <div class="slide">
                             <img alt="Retrato estilizado do artista 2 com fundo preto e detalhes em branco"
-                                src="https://akamai.sscdn.co/uploadfile/letras/fotos/8/1/3/5/813556c803f983f27dbd97dca203db56.jpg"
+                                src="https:// akamai.sscdn.co/uploadfile/letras/fotos/8/1/3/5/813556c803f983f27dbd97dca203db56.jpg"
                                 loading="lazy" />
                             <div class="caption">Emitê Único</div>
                         </div>
@@ -443,7 +394,7 @@
                         </div>
                         <div class="slide">
                             <img alt="Retrato estilizado do artista Buh com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406692153757857/469023305_18322236637091092_3084859825999992854_n.png?ex=680d3193&is=680be013&hm=b128f1a3b17ba5c2f12c24ce3a52799d6775d83c2f1f6c5ae21e1d5973d267da&=&width=779&height=974"
+                                src="https://media.discordapp.net/attachments/1353185480199377029/136540669215375 7857/469023305_18322236637091092_3084859825999992854_n.png?ex=680d3193&is=680be013&hm=b128f1a3b17ba5c2f12c24ce3a52799d6775d83c2f1f6c5ae21e1d5973d267da&=&width=779&height=974"
                                 loading="lazy" />
                             <div class="caption">Buh</div>
                         </div>
@@ -490,7 +441,7 @@
                     class="glass rounded-3xl p-6 shadow-2xl transition-shadow hover:shadow-4xl flex flex-col items-center text-center">
                     <img alt="Imagem promocional do show 1 com palco iluminado em tons de preto e branco"
                         class="rounded-3xl shadow-lg w-full h-64 object-cover mb-6" loading="lazy"
-                        src="https://media.discordapp.net/attachments/1353185480199377029/1365408436266729532/489869268_18501392656004062_288100784494449851_n.png?ex=680d3333&is=680be1b3&hm=40f2909bfcf2dc4bf7369820092d0787c941ff11b438f34f7be326eb155df0c5&=&width=780&height=974" />
+                        src="https://media.discordapp.net/attachments/1353185480199377029/1365408436266729532/489 869268_18501392656004062_288100784494449851_n.png?ex=680d3333&is=680be1b3&hm=40f2909bfcf2dc4bf7369820092d0787c941ff11b438f34f7be326eb155df0c5&=&width=780&height=974" />
                     <h3 class="text-2xl font-extrabold mb-2">Ryu, The Runner</h3>
                     <p class="text-lg font-semibold text-white/80 mb-4">07 de Junho, 2025</p>
                     <p class="text-base mb-6">Bar Da Opinião, Porto Alegre - RS</p>
@@ -635,56 +586,6 @@
                 menuToggle.setAttribute('aria-expanded', 'false');
                 menuToggle.innerHTML = '<i class="fas fa-bars fa-lg"></i>';
             });
-        });
-
-        // Chain images movement on mouse hover and scroll
-        const chains = [
-            document.getElementById('chain1'),
-            document.getElementById('chain2'),
-            document.getElementById('chain3'),
-            document.getElementById('chain4')
-        ];
-
-        // Store original positions
-        const originalPositions = chains.map(chain => {
-            const rect = chain.getBoundingClientRect();
-            return { left: rect.left + window.scrollX, top: rect.top + window.scrollY };
-        });
-
-        // Random movement factors for each chain
-        const movementFactors = chains.map(() => ({
-            x: (Math.random() * 2 - 1) * 20,
-            y: (Math.random() * 2 - 1) * 20
-        }));
-
-        // On mouse move over chain, move it slightly randomly
-        chains.forEach((chain, i) => {
-            chain.addEventListener('mouseenter', () => {
-                chain.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-                chain.style.transform = `translate(${movementFactors[i].x}px, ${movementFactors[i].y}px) scale(1.05)`;
-                chain.style.opacity = '0.3';
-            });
-            chain.addEventListener('mouseleave', () => {
-                chain.style.transform = 'translate(0, 0) scale(1)';
-                chain.style.opacity = originalPositions[i] ? '0.7' : '1';
-            });
-        });
-
-        // On scroll, chains move horizontally out of view and fade out, then fade back in when scroll stops
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            chains.forEach((chain, i) => {
-                chain.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-                chain.style.transform = `translateX(${movementFactors[i].x * 5}px) translateY(${movementFactors[i].y * 2}px)`;
-                chain.style.opacity = '0';
-            });
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                chains.forEach((chain, i) => {
-                    chain.style.transform = 'translate(0, 0) scale(1)';
-                    chain.style.opacity = '0.7';
-                });
-            }, 250);
         });
 
         // Slider functionality
