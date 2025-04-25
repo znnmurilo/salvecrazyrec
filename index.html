@@ -243,7 +243,7 @@
             background: #fff;
         }
 
-        /* Artists Carousel */
+        /* Artists Section */
         .artists-section {
             max-width: 1200px;
             margin: 3rem auto 4rem;
@@ -251,15 +251,23 @@
             user-select: none;
         }
 
+        /* Categories container: flex with main categories and dropdown */
         .artists-header {
             display: flex;
-            justify-content: flex-end;
-            gap: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
             margin-bottom: 1.5rem;
+            align-items: center;
+        }
+
+        /* Main categories buttons */
+        .main-categories {
+            display: flex;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
-        .artists-header button {
+        .main-categories button {
             background: rgba(255 255 255 / 0.1);
             border: 2px solid #fff;
             color: #fff;
@@ -269,14 +277,81 @@
             cursor: pointer;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
             user-select: none;
+            white-space: nowrap;
+            font-size: 0.875rem;
         }
 
-        .artists-header button.active,
-        .artists-header button:hover {
+        .main-categories button.active,
+        .main-categories button:hover {
             background: rgba(255 255 255 / 0.25);
             box-shadow: 0 0 20px rgba(255 255 255 / 0.6);
         }
 
+        /* Dropdown container */
+        .artist-dropdown {
+            position: relative;
+            user-select: none;
+        }
+
+        .artist-dropdown button {
+            background: rgba(255 255 255 / 0.1);
+            border: 2px solid #fff;
+            color: #fff;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .artist-dropdown button:hover,
+        .artist-dropdown button.active {
+            background: rgba(255 255 255 / 0.25);
+            box-shadow: 0 0 20px rgba(255 255 255 / 0.6);
+        }
+
+        .artist-dropdown-list {
+            position: absolute;
+            top: 110%;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 0.75rem;
+            box-shadow: 0 0 20px rgba(255 255 255 / 0.4);
+            max-height: 300px;
+            overflow-y: auto;
+            min-width: 200px;
+            z-index: 100;
+            display: none;
+            flex-direction: column;
+        }
+
+        .artist-dropdown-list.show {
+            display: flex;
+        }
+
+        .artist-dropdown-list button {
+            background: transparent;
+            border: none;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-align: left;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .artist-dropdown-list button:hover,
+        .artist-dropdown-list button.active {
+            background: rgba(255 255 255 / 0.25);
+        }
+
+        /* Artists Carousel */
         .artists-carousel {
             position: relative;
             overflow: hidden;
@@ -370,6 +445,56 @@
 
         #artist-next {
             right: 0.5rem;
+        }
+
+        /* Artist Details Section */
+        .artist-details {
+            max-width: 1200px;
+            margin: 2rem auto 4rem;
+            padding: 0 1rem;
+            background: rgba(255 255 255 / 0.1);
+            border-radius: 1.5rem;
+            box-shadow: 0 0 25px rgba(255 255 255 / 0.3);
+            user-select: none;
+            backdrop-filter: saturate(180%) blur(10px);
+            border: 1px solid rgba(255 255 255, 0.2);
+            transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        .artist-details.active {
+            display: flex;
+        }
+
+        .artist-details img {
+            width: 320px;
+            max-width: 90vw;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 30px rgba(255 255 255 / 0.4);
+            user-select: none;
+        }
+
+        .artist-details h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fff;
+            user-select: text;
+        }
+
+        .artist-details p {
+            font-size: 1.125rem;
+            color: #cbd5e0;
+            max-width: 700px;
+            user-select: text;
+            line-height: 1.5;
         }
 
         /* News Section */
@@ -593,7 +718,7 @@
             }
 
             #mobile-menu {
-                display: flex;
+                display: none;
             }
 
             .slide-text {
@@ -660,65 +785,48 @@
 
         footer {
             padding: 2rem 1rem;
-            /* Adiciona padding ao footer */
         }
 
         .footer-content {
             display: flex;
             flex-direction: column;
-            /* Muda para coluna para centralizar verticalmente */
             align-items: center;
-            /* Centraliza horizontalmente */
             text-align: center;
-            /* Centraliza o texto */
         }
 
         .footer-section {
             margin-bottom: 1.5rem;
-            /* Adiciona espaço entre as seções */
         }
 
         .footer-logo img {
             max-width: 100px;
-            /* Limita a largura do logo */
             margin-bottom: 0.5rem;
-            /* Espaço abaixo do logo */
         }
 
         .footer-section h3 {
             margin-bottom: 0.5rem;
-            /* Espaço abaixo do título */
             font-size: 1.25rem;
-            /* Aumenta o tamanho da fonte do título */
             color: #fff;
-            /* Cor do título */
         }
 
         .footer-section p {
             margin: 0;
-            /* Remove margens padrão */
             color: #a0aec0;
-            /* Cor do texto */
         }
 
         .social-icons {
             display: flex;
             justify-content: center;
-            /* Centraliza os ícones sociais */
             gap: 1rem;
-            /* Espaço entre os ícones */
         }
 
         .social-icons a {
             color: #fff;
-            /* Cor dos ícones */
             transition: color 0.3s ease;
-            /* Transição suave para hover */
         }
 
         .social-icons a:hover {
             color: #a0aec0;
-            /* Cor ao passar o mouse */
         }
     </style>
 </head>
@@ -788,83 +896,128 @@
             </div>
         </section>
 
-        <!-- Artists Carousel -->
+        <!-- Artists Section with main categories and compact dropdown for all artists -->
         <section class="artists-section" aria-label="Nossos Artistas">
             <div class="artists-header" role="tablist" aria-label="Categorias de artistas">
-                <button class="active" data-category="all" role="tab" aria-selected="true" tabindex="0">Todos</button>
-                <button data-category="ryu" role="tab" aria-selected="false" tabindex="-1">Ryu, The Runner</button>
-                <button data-category="emite" role="tab" aria-selected="false" tabindex="-1">Emitê Único</button>
-                <button data-category="senndy" role="tab" aria-selected="false" tabindex="-1">Senndy</button>
-                <button data-category="others" role="tab" aria-selected="false" tabindex="-1">Outros</button>
+                <div class="main-categories" role="tablist" aria-label="Categorias principais de artistas">
+                    <button class="active" data-category="principais" role="tab" aria-selected="true"
+                        tabindex="0">Principais</button>
+                    <button data-category="others" role="tab" aria-selected="false" tabindex="-1">Outros</button>
+                </div>
+                <div class="artist-dropdown" aria-haspopup="listbox" aria-expanded="false"
+                    aria-label="Selecionar artista">
+                    <button id="dropdown-button" aria-haspopup="listbox" aria-expanded="false"
+                        aria-controls="dropdown-list">
+                        Todos os Artistas <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="artist-dropdown-list" id="dropdown-list" role="listbox" tabindex="-1">
+                        <button role="option" data-artist="Ryu, The Runner" tabindex="-1">Ryu, The Runner</button>
+                        <button role="option" data-artist="Emitê Único" tabindex="-1">Emitê Único</button>
+                        <button role="option" data-artist="Senndy" tabindex="-1">Senndy</button>
+                        <button role="option" data-artist="Lenco Baller" tabindex="-1">Lenco Baller</button>
+                        <button role="option" data-artist="Dazzen" tabindex="-1">Dazzen</button>
+                        <button role="option" data-artist="LSZ" tabindex="-1">LSZ</button>
+                        <button role="option" data-artist="Lelo" tabindex="-1">Lelo</button>
+                        <button role="option" data-artist="Nik" tabindex="-1">Nik</button>
+                        <button role="option" data-artist="Zion" tabindex="-1">Zion</button>
+                        <button role="option" data-artist="Buh" tabindex="-1">Buh</button>
+                        <button role="option" data-artist="Tchutchub" tabindex="-1">Tchutchub</button>
+                        <button role="option" data-artist="Cassin" tabindex="-1">Cassin</button>
+                    </div>
+                </div>
             </div>
             <div class="artists-carousel glass" aria-live="polite" aria-atomic="true">
                 <button id="artist-prev" class="artist-carousel-btn" aria-label="Artista anterior"><i
                         class="fas fa-chevron-left"></i></button>
                 <div class="artists-track" id="artists-track">
-                    <!-- Artist cards with data-category for filtering -->
-                    <div class="artist-card" data-category="ryu">
+                    <!-- Artist cards with data-category and data-name -->
+                    <div class="artist-card" data-category="principais" data-name="Ryu, The Runner"
+                        data-description="Ryu, The Runner é um artista renomado da gravadora Salve Crazy Rec, conhecido por seu estilo único e energia contagiante."
+                        data-image="https://i.scdn.co/image/ab6761610000e5eba5a24ea49c5241b8c4e74dfa">
                         <img alt="Retrato estilizado do artista Ryu, The Runner com fundo preto e detalhes em branco"
                             loading="lazy" src="https://i.scdn.co/image/ab6761610000e5eba5a24ea49c5241b8c4e74dfa" />
                         <div class="artist-name">Ryu, The Runner</div>
                     </div>
-                    <div class="artist-card" data-category="emite">
+                    <div class="artist-card" data-category="principais" data-name="Emitê Único"
+                        data-description="Emitê Único é um artista inovador da Salve Crazy Rec, trazendo letras profundas e batidas marcantes."
+                        data-image="https://akamai.sscdn.co/uploadfile/letras/fotos/8/1/3/5/813556c803f983f27dbd97dca203db56.jpg">
                         <img alt="Retrato estilizado do artista Emitê Único com fundo preto e detalhes em branco"
                             loading="lazy"
                             src="https://akamai.sscdn.co/uploadfile/letras/fotos/8/1/3/5/813556c803f983f27dbd97dca203db56.jpg" />
                         <div class="artist-name">Emitê Único</div>
                     </div>
-                    <div class="artist-card" data-category="senndy">
+                    <div class="artist-card" data-category="principais" data-name="Senndy"
+                        data-description="Senndy é um dos talentos emergentes da gravadora, com um estilo fresco e inovador."
+                        data-image="https://i.scdn.co/image/ab67616d0000b2732fd75d1268407938f81d193b">
                         <img alt="Retrato estilizado do artista Senndy com fundo preto e detalhes em branco"
                             loading="lazy" src="https://i.scdn.co/image/ab67616d0000b2732fd75d1268407938f81d193b" />
                         <div class="artist-name">Senndy</div>
                     </div>
-                    <div class="artist-card" data-category="others">
+                    <div class="artist-card" data-category="others" data-name="Lenco Baller"
+                        data-description="Lenco Baller é um artista da Salve Crazy Rec com um estilo único e presença marcante."
+                        data-image="https://images.genius.com/d4c6247e95f13ae97e90da8ebaa2e8f5.1000x1000x1.jpg">
                         <img alt="Retrato estilizado do artista Lenco Baller com fundo preto e detalhes em branco"
                             loading="lazy"
                             src="https://images.genius.com/d4c6247e95f13ae97e90da8ebaa2e8f5.1000x1000x1.jpg" />
                         <div class="artist-name">Lenco Baller</div>
                     </div>
-                    <div class="artist-card" data-category="others">
+                    <div class="artist-card" data-category="others" data-name="Dazzen"
+                        data-description="Dazzen traz uma vibe única e letras impactantes para a gravadora Salve Crazy Rec."
+                        data-image="https://media.discordapp.net/attachments/1353185480199377029/1365406321930666054/481847759_18055105289480601_2579986342319049779_n.png?ex=680d313b&is=680bdfbb&hm=8fb703707f04fc15a85de0cbc870b5c24d75b4160e8285aad6959520038ff451&=&width=779&height=974">
                         <img alt="Retrato estilizado do artista Dazzen com fundo preto e detalhes em branco"
                             loading="lazy"
                             src="https://media.discordapp.net/attachments/1353185480199377029/1365406321930666054/481847759_18055105289480601_2579986342319049779_n.png?ex=680d313b&is=680bdfbb&hm=8fb703707f04fc15a85de0cbc870b5c24d75b4160e8285aad6959520038ff451&=&width=779&height=974" />
                         <div class="artist-name">Dazzen</div>
                     </div>
-                    <div class="artist-card" data-category="others">
+                    <div class="artist-card" data-category="others" data-name="LSZ"
+                        data-description="LSZ é um artista da Salve Crazy Rec conhecido por sua autenticidade e talento."
+                        data-image="https://media.discordapp.net/attachments/1353185480199377029/1365406414352416808/469906375_1223425362100695_8041380873810668277_n.png?ex=680d3151&is=680bdfd1&hm=cc2c16c52d57eba34815e67d973b00be8086880194c6cc71969d3412bbb91608&=&width=779&height=974">
                         <img alt="Retrato estilizado do artista LSZ com fundo preto e detalhes em branco" loading="lazy"
                             src="https://media.discordapp.net/attachments/1353185480199377029/1365406414352416808/469906375_1223425362100695_8041380873810668277_n.png?ex=680d3151&is=680bdfd1&hm=cc2c16c52d57eba34815e67d973b00be8086880194c6cc71969d3412bbb91608&=&width=779&height=974" />
                         <div class="artist-name">LSZ</div>
                     </div>
-                    <div class="artist-card" data-category="others">
+                    <div class="artist-card" data-category="others" data-name="Lelo"
+                        data-description="Lelo é um artista da Salve Crazy Rec com uma presença forte e estilo marcante."
+                        data-image="https://media.discordapp.net/attachments/1353185480199377029/1365406510355583088/481267060_18056544623490743_6370694021818490092_n.png?ex=680d3168&is=680bdfe8&hm=56d3b691029773fb58f2e7cb79ed7ff7baf6a32de6a55f09cdb2701cbc7d5225&=&width=974&height=974">
                         <img alt="Retrato estilizado do artista Lelo com fundo preto e detalhes em branco"
                             loading="lazy"
                             src="https://media.discordapp.net/attachments/1353185480199377029/1365406510355583088/481267060_18056544623490743_6370694021818490092_n.png?ex=680d3168&is=680bdfe8&hm=56d3b691029773fb58f2e7cb79ed7ff7baf6a32de6a55f09cdb2701cbc7d5225&=&width=974&height=974" />
                         <div class="artist-name">Lelo</div>
                     </div>
-                    <div class="artist-card" data-category="others">
+                    <div class="artist-card" data-category="others" data-name="Nik"
+                        data-description="Nik é um artista da Salve Crazy Rec com estilo próprio e letras impactantes."
+                        data-image="https://media.discordapp.net/attachments/1353185480199377029/1365406626210775050/485017097_18494597986058957_4208813116893513908_n.png?ex=680d3183&is=680be003&hm=110e847ae71fdc527626b32c057e5a0523d4f297991858dda959412093b8554f&=&width=780&height=974">
                         <img alt="Retrato estilizado do artista Nik com fundo preto e detalhes em branco" loading="lazy"
                             src="https://media.discordapp.net/attachments/1353185480199377029/1365406626210775050/485017097_18494597986058957_4208813116893513908_n.png?ex=680d3183&is=680be003&hm=110e847ae71fdc527626b32c057e5a0523d4f297991858dda959412093b8554f&=&width=780&height=974" />
                         <div class="artist-name">Nik</div>
                     </div>
-                    <div class="artist-card" data-category="others">
+                    <div class="artist-card" data-category="others" data-name="Zion"
+                        data-description="Zion é um artista da Salve Crazy Rec com uma voz marcante e presença de palco forte."
+                        data-image="https://images-ext-1.discordapp.net/external/N-CAqgxShxr-ZIbT0JSZfsmiunAhdVZkPRyRBytVZpc/%3Fstp%3Ddst-jpg_e35_tt6%26efg%3DeyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTgwMC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ%26_nc_ht%3Dinstagram.fnvt4-1.fna.fbcdn.net%26_nc_cat%3D109%26_nc_oc%3DQ6cZ2QFBfwbsJ9c3DsrlzVYrW_RS_AEHHFZxptmOn-QNN_it8hhcmhIu2L5nqaLzbzBFxVE%26_nc_ohc%3DhZabscuFVKAQ7kNvwGazYpu%26_nc_gid%3Dq86nBXKd6k97PstkTLHDRg%26edm%3DAPoiHPcBAAAA%26ccb%3D7-5%26ig_cache_key%3DMzI3NDU3MTkzNzc3MDU5OTk5NQ%253D%253D.3-ccb7-5%26oh%3D00_AfHu69AvMBQnC4LUg7AulBaRINnA4gvn75uYV70cnkKqWQ%26oe%3D6811C81F%26_nc_sid%3D22de04/https/instagram.fnvt4-1.fna.fbcdn.net/v/t51.29350-15/416959582_302183629481757_576608383613888725_n.jpg?width=779&height=974">
                         <img alt="Retrato estilizado do artista Zion com fundo preto e detalhes em branco"
                             loading="lazy"
                             src="https://images-ext-1.discordapp.net/external/N-CAqgxShxr-ZIbT0JSZfsmiunAhdVZkPRyRBytVZpc/%3Fstp%3Ddst-jpg_e35_tt6%26efg%3DeyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTgwMC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ%26_nc_ht%3Dinstagram.fnvt4-1.fna.fbcdn.net%26_nc_cat%3D109%26_nc_oc%3DQ6cZ2QFBfwbsJ9c3DsrlzVYrW_RS_AEHHFZxptmOn-QNN_it8hhcmhIu2L5nqaLzbzBFxVE%26_nc_ohc%3DhZabscuFVKAQ7kNvwGazYpu%26_nc_gid%3Dq86nBXKd6k97PstkTLHDRg%26edm%3DAPoiHPcBAAAA%26ccb%3D7-5%26ig_cache_key%3DMzI3NDU3MTkzNzc3MDU5OTk5NQ%253D%253D.3-ccb7-5%26oh%3D00_AfHu69AvMBQnC4LUg7AulBaRINnA4gvn75uYV70cnkKqWQ%26oe%3D6811C81F%26_nc_sid%3D22de04/https/instagram.fnvt4-1.fna.fbcdn.net/v/t51.29350-15/416959582_302183629481757_576608383613888725_n.jpg?width=779&height=974" />
                         <div class="artist-name">Zion</div>
                     </div>
-                    <div class="artist-card" data-category="others">
+                    <div class="artist-card" data-category="others" data-name="Buh"
+                        data-description="Buh é um artista da Salve Crazy Rec com estilo próprio e presença marcante."
+                        data-image="https://media.discordapp.net/attachments/1353185480199377029/1365406692153757857/469023305_18322236637091092_3084859825999992854_n.png?ex=680d3193&is=680be013&hm=b128f1a3b17ba5c2f12c24ce3a52799d6775d83c2f1f6c5ae21e1d5973d267da&=&width=779&height=974">
                         <img alt="Retrato estilizado do artista Buh com fundo preto e detalhes em branco" loading="lazy"
                             src="https://media.discordapp.net/attachments/1353185480199377029/1365406692153757857/469023305_18322236637091092_3084859825999992854_n.png?ex=680d3193&is=680be013&hm=b128f1a3b17ba5c2f12c24ce3a52799d6775d83c2f1f6c5ae21e1d5973d267da&=&width=779&height=974" />
                         <div class="artist-name">Buh</div>
                     </div>
-                    <div class="artist-card" data-category="others">
+                    <div class="artist-card" data-category="others" data-name="Tchutchub"
+                        data-description="Tchutchub é um artista da Salve Crazy Rec conhecido por sua energia e autenticidade."
+                        data-image="https://media.discordapp.net/attachments/1353185480199377029/1365405841435398174/image.png?ex=680d30c8&is=680bdf48&hm=d8ff1b932918acb152f6276a53d008d69df05c5868b325d1bfd0ac2b889abcb6&=&width=562&height=560">
                         <img alt="Retrato estilizado do artista Tchutchub com fundo preto e detalhes em branco"
                             loading="lazy"
                             src="https://media.discordapp.net/attachments/1353185480199377029/1365405841435398174/image.png?ex=680d30c8&is=680bdf48&hm=d8ff1b932918acb152f6276a53d008d69df05c5868b325d1bfd0ac2b889abcb6&=&width=562&height=560" />
                         <div class="artist-name">Tchutchub</div>
                     </div>
-                    <div class="artist-card" data-category="others">
-                        <img alt="Retrato estilizado do artista Tchutchub com fundo preto e detalhes em branco"
+                    <div class="artist-card" data-category="others" data-name="Cassin"
+                        data-description="Cassin é um artista da Salve Crazy Rec com talento e presença marcante."
+                        data-image="https://media.discordapp.net/attachments/1353185480199377029/1365452682407579729/486233968_1062651492549763_5539685661732968850_n.png?ex=680d5c68&is=680c0ae8&hm=0479c60064ac4654c1578dac119daa6e6b990667f2b3b08d41f89efee4db10a0&=&width=974&height=974">
+                        <img alt="Retrato estilizado do artista Cassin com fundo preto e detalhes em branco"
                             loading="lazy"
                             src="https://media.discordapp.net/attachments/1353185480199377029/1365452682407579729/486233968_1062651492549763_5539685661732968850_n.png?ex=680d5c68&is=680c0ae8&hm=0479c60064ac4654c1578dac119daa6e6b990667f2b3b08d41f89efee4db10a0&=&width=974&height=974" />
                         <div class="artist-name">Cassin</div>
@@ -872,6 +1025,11 @@
                 </div>
                 <button id="artist-next" class="artist-carousel-btn" aria-label="Próximo artista"><i
                         class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="artist-details" id="artist-details" aria-live="polite" aria-atomic="true">
+                <img src="" alt="" id="artist-details-img" />
+                <h3 id="artist-details-name"></h3>
+                <p id="artist-details-description"></p>
             </div>
         </section>
 
@@ -986,6 +1144,12 @@
         // Mobile menu toggle
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
+        // Ensure mobile menu is hidden on load
+        mobileMenu.style.display = 'none';
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        mobileMenu.setAttribute('aria-hidden', 'true');
+
         menuToggle.addEventListener('click', () => {
             const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
             if (expanded) {
@@ -1044,14 +1208,23 @@
             updateSlider(0);
         })();
 
-        // Artists carousel with arrows and category filtering
+        // Artists carousel with arrows and category filtering + dropdown for all artists
         (() => {
             const track = document.getElementById('artists-track');
             const prevBtn = document.getElementById('artist-prev');
             const nextBtn = document.getElementById('artist-next');
-            const buttons = document.querySelectorAll('.artists-header button');
+            const mainCategoryButtons = document.querySelectorAll('.main-categories button');
+            const dropdownButton = document.getElementById('dropdown-button');
+            const dropdownList = document.getElementById('dropdown-list');
+            const dropdownOptions = dropdownList.querySelectorAll('button');
+            const artistDetails = document.getElementById('artist-details');
+            const artistDetailsImg = document.getElementById('artist-details-img');
+            const artistDetailsName = document.getElementById('artist-details-name');
+            const artistDetailsDescription = document.getElementById('artist-details-description');
+
             let currentIndex = 0;
-            let filteredCards = Array.from(track.children);
+            let filteredCards = [];
+
             const cardMarginRight = 16; // 1rem margin-right in px approx
 
             function updateCarousel() {
@@ -1079,9 +1252,50 @@
 
             window.addEventListener('resize', updateCarousel);
 
-            buttons.forEach(button => {
+            // Filter cards by category
+            function filterByCategory(category) {
+                if (category === 'principais') {
+                    filteredCards = Array.from(track.children).filter(card => card.getAttribute('data-category') === 'principais');
+                } else if (category === 'others') {
+                    filteredCards = Array.from(track.children).filter(card => card.getAttribute('data-category') === 'others');
+                } else {
+                    filteredCards = Array.from(track.children);
+                }
+                // Hide all cards first
+                Array.from(track.children).forEach(card => card.style.display = 'none');
+                // Show filtered cards
+                filteredCards.forEach(card => card.style.display = 'flex');
+                currentIndex = 0;
+                updateCarousel();
+                hideArtistDetails();
+            }
+
+            // Show artist details
+            function showArtistDetails(card) {
+                const name = card.getAttribute('data-name');
+                const description = card.getAttribute('data-description');
+                const image = card.getAttribute('data-image');
+                artistDetailsImg.src = image;
+                artistDetailsImg.alt = `Imagem do artista ${name} com fundo preto e detalhes em branco`;
+                artistDetailsName.textContent = name;
+                artistDetailsDescription.textContent = description;
+                artistDetails.classList.add('active');
+                artistDetails.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            // Hide artist details
+            function hideArtistDetails() {
+                artistDetails.classList.remove('active');
+                artistDetailsImg.src = '';
+                artistDetailsImg.alt = '';
+                artistDetailsName.textContent = '';
+                artistDetailsDescription.textContent = '';
+            }
+
+            // Main categories buttons click
+            mainCategoryButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    buttons.forEach(btn => {
+                    mainCategoryButtons.forEach(btn => {
                         btn.classList.remove('active');
                         btn.setAttribute('aria-selected', 'false');
                         btn.tabIndex = -1;
@@ -1090,21 +1304,115 @@
                     button.setAttribute('aria-selected', 'true');
                     button.tabIndex = 0;
 
-                    const category = button.getAttribute('data-category');
-                    filteredCards = Array.from(track.children).filter(card => {
-                        return category === 'all' || card.getAttribute('data-category') === category;
-                    });
-                    // Hide all cards first
-                    Array.from(track.children).forEach(card => card.style.display = 'none');
-                    // Show filtered cards
-                    filteredCards.forEach(card => card.style.display = 'flex');
-                    currentIndex = 0;
-                    updateCarousel();
+                    // Close dropdown if open
+                    closeDropdown();
+
+                    filterByCategory(button.getAttribute('data-category'));
                 });
             });
 
-            // Initialize: show all
-            buttons[0].click();
+            // Dropdown toggle
+            dropdownButton.addEventListener('click', () => {
+                const expanded = dropdownButton.getAttribute('aria-expanded') === 'true';
+                if (expanded) {
+                    closeDropdown();
+                } else {
+                    openDropdown();
+                }
+            });
+
+            function openDropdown() {
+                dropdownList.classList.add('show');
+                dropdownButton.setAttribute('aria-expanded', 'true');
+                dropdownList.focus();
+            }
+
+            function closeDropdown() {
+                dropdownList.classList.remove('show');
+                dropdownButton.setAttribute('aria-expanded', 'false');
+            }
+
+            // Dropdown option click
+            dropdownOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const artistName = option.getAttribute('data-artist');
+                    dropdownButton.innerHTML = `${artistName} <i class="fas fa-chevron-down"></i>`;
+                    closeDropdown();
+
+                    // Remove active from main categories
+                    mainCategoryButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                        btn.tabIndex = -1;
+                    });
+
+                    // Show only the selected artist card
+                    filteredCards = Array.from(track.children).filter(card => card.getAttribute('data-name') === artistName);
+                    Array.from(track.children).forEach(card => card.style.display = 'none');
+                    filteredCards.forEach(card => card.style.display = 'flex');
+                    currentIndex = 0;
+                    updateCarousel();
+
+                    // Show artist details
+                    if (filteredCards.length === 1) {
+                        showArtistDetails(filteredCards[0]);
+                    } else {
+                        hideArtistDetails();
+                    }
+                });
+            });
+
+            // Close dropdown if clicked outside
+            document.addEventListener('click', (e) => {
+                if (!dropdownButton.contains(e.target) && !dropdownList.contains(e.target)) {
+                    closeDropdown();
+                }
+            });
+
+            // Keyboard navigation for dropdown
+            dropdownButton.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openDropdown();
+                    dropdownOptions[0].focus();
+                }
+            });
+
+            dropdownList.addEventListener('keydown', (e) => {
+                const focusedIndex = Array.from(dropdownOptions).indexOf(document.activeElement);
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const nextIndex = (focusedIndex + 1) % dropdownOptions.length;
+                    dropdownOptions[nextIndex].focus();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    const prevIndex = (focusedIndex - 1 + dropdownOptions.length) % dropdownOptions.length;
+                    dropdownOptions[prevIndex].focus();
+                } else if (e.key === 'Escape') {
+                    e.preventDefault();
+                    closeDropdown();
+                    dropdownButton.focus();
+                } else if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    document.activeElement.click();
+                }
+            });
+
+            // Click on artist card to show details (only if main categories selected)
+            track.addEventListener('click', (e) => {
+                const card = e.target.closest('.artist-card');
+                if (!card) return;
+                // If a main category is active, show details on card click
+                const activeMainCategory = Array.from(mainCategoryButtons).find(btn => btn.classList.contains('active'));
+                if (activeMainCategory) {
+                    showArtistDetails(card);
+                    // Reset dropdown button text
+                    dropdownButton.innerHTML = `Todos os Artistas <i class="fas fa-chevron-down"></i>`;
+                }
+            });
+
+            // Initialize with "Principais" selected
+            mainCategoryButtons[0].click();
         })();
     </script>
 </body>
