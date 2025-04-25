@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Salve Crazy Rec</title>
-    <meta content="Salve Crazy Rec - A Vanguarda da Música Contemporânea" name="description" />
+    <meta content="Salve Crazy Rec - Gravadora Do Ryu, The Runner, Emitê Único, Senndy e demais..."
+        name="description" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -67,7 +68,6 @@
         /* Carousel styles */
         #artist-carousel {
             position: relative;
-            overflow: hidden;
             max-width: 100%;
         }
 
@@ -75,6 +75,8 @@
             display: flex;
             transition: transform 0.5s ease;
             will-change: transform;
+            overflow: hidden;
+            border-radius: 1.5rem;
         }
 
         #artist-carousel .slide {
@@ -146,11 +148,11 @@
             box-shadow: 0 0 20px rgba(255 255 255 / 0.6);
         }
 
-        #artist-carousel button#artist-prev {
+        #artist-prev {
             left: 0.5rem;
         }
 
-        #artist-carousel button#artist-next {
+        #artist-next {
             right: 0.5rem;
         }
 
@@ -187,20 +189,17 @@
             <a class="flex items-center space-x-3 select-none" href="#">
                 <img alt="Logotipo da gravadora Salve Crazy Rec em preto e branco" class="h-12 w-auto" height="50"
                     loading="lazy"
-                    src="https://yt3.googleusercontent.com/vuzaZuFisqDWCTKBuddJ2iLHBue9PpKAo1zTJjTN2gx3YLhYckeAT_mK-eYLBoAfrMFpVaVN=s900-c-k-c0x00ffffff-no-rj"
+                    src="https://yt3.googleusercontent.com/vuzaZuFisqDWCTKBuddJ2iLHBue9PpKAo1zTJjTN2gx3YLhYckeAT_mK-eYLBoAfrMFpVaVN=s900-ck-c0x00ffffff-no-rj"
                     width="150" />
-                <span class="text-2xl font-bold tracking-wide select-none">
-                    Salve Crazy Rec
-                </span>
+                <span class="text-2xl font-bold tracking-wide select-none">Salve Crazy Rec</span>
             </a>
             <nav>
                 <ul class="hidden md:flex space-x-10 text-lg font-semibold tracking-wide select-none" id="desktop-menu">
-                    <li><a class="block hover:text-gray-400" href="https://salvecrazy.com">Merch</a></li>
+                    <li><a class="block hover:text-gray-400" href="https://salvecrazy.com">Mercadoria</a></li>
                     <li><a class="hover:text-gray-400" href="#artistas">Artistas</a></li>
                     <li><a class="hover:text-gray-400" href="#lancamentos">Lançamentos</a></li>
                     <li><a class="hover:text-gray-400" href="#shows">Shows</a></li>
-                    <li><a class="hover:text-gray-400" href="#noticias">Central De Fãs</a></li>
-
+                    <li><a class="hover:text-gray-400" href="#noticias">Central de Fãs</a></li>
                     <li><a class="hover:text-gray-400" href="#contato">Contato</a></li>
                 </ul>
                 <button aria-expanded="false" aria-label="Abrir menu"
@@ -210,20 +209,19 @@
                 </button>
             </nav>
         </div>
-        <div aria-hidden="true" class="md:hidden max-h-0 bg-black bg-opacity-80 backdrop-blur-md glass overflow-hidden"
+        <div aria-hidden="true"
+            class="md:hidden max-h-0 bg-black bg-opacity-80 backdrop-blur-md glass overflow-hidden transition-max-height duration-300 ease-in-out"
             id="mobile-menu">
             <ul class="flex flex-col space-y-4 p-6 text-lg font-semibold tracking-wide select-none">
-                <li><a class="block hover:text-gray-400" href="https://salvecrazy.com">Merch</a></li>
+                <li><a class="block hover:text-gray-400" href="https://salvecrazy.com">Mercadoria</a></li>
                 <li><a class="block hover:text-gray-400" href="#artistas">Artistas</a></li>
                 <li><a class="block hover:text-gray-400" href="#lancamentos">Lançamentos</a></li>
                 <li><a class="block hover:text-gray-400" href="#shows">Shows</a></li>
-                <li><a class="block hover:text-gray-400" href="#noticias">Central De Fãs</a></li>
-
+                <li><a class="block hover:text-gray-400" href="#noticias">Central de Fãs</a></li>
                 <li><a class="block hover:text-gray-400" href="#contato">Contato</a></li>
             </ul>
         </div>
     </header>
-
     <main class="pt-24 flex-grow space-y-32 max-w-7xl mx-auto px-4 sm:px-6 md:px-0">
         <section aria-label="Destaque Salve Crazy Rec" class="relative rounded-xl overflow-hidden shadow-2xl">
             <div class="relative w-full overflow-hidden rounded-xl" id="slider">
@@ -239,11 +237,9 @@
                             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-10 sm:p-16 rounded-xl">
                             <h1
                                 class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white drop-shadow-lg max-w-4xl tracking-wide">
-                                Ouça "Sémreh"
-                            </h1>
+                                Ouça "Sémreh"</h1>
                             <p class="mt-6 text-xl sm:text-2xl text-gray-300 max-w-3xl drop-shadow-md font-sans">
-                                Disponível em todas as plataformas digitais.
-                            </p>
+                                Disponível em todas as plataformas digitais.</p>
                         </div>
                     </a>
                     <a href="https://bileto.sympla.com.br/event/105037/d/312942/s/2132480" target="_blank"
@@ -257,11 +253,9 @@
                             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-10 sm:p-16 rounded-xl">
                             <h1
                                 class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white drop-shadow-lg max-w-4xl tracking-wide">
-                                Ryu, The Runner em Porto Alegre
-                            </h1>
-                            <p class="mt-6 text-xl sm:text-2xl text-gray-300 max-w-3xl drop-shadow-md font-sans">
-                                Compre os ingressos já!
-                            </p>
+                                Ryu, The Runner em Porto Alegre</h1>
+                            <p class="mt-6 text-xl sm:text-2xl text-gray-300 max-w-3xl drop-shadow-md font-sans">Compre
+                                os ingressos já!</p>
                         </div>
                     </a>
                     <a href="https://open.spotify.com/intl-pt/album/2xTJzFHszAuE5hAq0Q1Rpw?si=ozwI1h26Qu6xZKzlSUlC4w"
@@ -274,11 +268,9 @@
                             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-10 sm:p-16 rounded-xl">
                             <h1
                                 class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white drop-shadow-lg max-w-4xl tracking-wide">
-                                Ouça "Unique"
-                            </h1>
+                                Ouça "Único"</h1>
                             <p class="mt-6 text-xl sm:text-2xl text-gray-300 max-w-3xl drop-shadow-md font-sans">
-                                Disponível em todas as plataformas digitais.
-                            </p>
+                                Disponível em todas as plataformas digitais.</p>
                         </div>
                     </a>
                 </div>
@@ -305,11 +297,8 @@
                 </div>
             </div>
         </section>
-
         <section id="artistas" class="space-y-12 relative">
-            <h2 class="text-5xl font-extrabold text-right tracking-wide max-w-7xl mx-auto">
-                Nossos Artistas
-            </h2>
+            <h2 class="text-5xl font-extrabold text-right tracking-wide max-w-7xl mx-auto">Nossos Artistas</h2>
             <div id="artist-carousel" class="relative max-w-7xl mx-auto">
                 <button id="artist-prev"
                     class="carousel-btn glass btn-glow absolute top-1/2 left-2 -translate-y-1/2 z-20"
@@ -319,66 +308,66 @@
                 <div class="slides overflow-hidden rounded-3xl">
                     <div class="flex transition-transform duration-500 ease-in-out" id="artist-slides">
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 1 com fundo preto e detalhes em branco"
+                            <img alt="Retrato estilizado do artista Ryu, The Runner com fundo preto e detalhes em branco"
                                 src="https://i.scdn.co/image/ab6761610000e5eba5a24ea49c5241b8c4e74dfa" loading="lazy" />
                             <div class="caption">Ryu, The Runner</div>
                         </div>
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 2 com fundo preto e detalhes em branco"
+                            <img alt="Retrato estilizado do artista Emitê Único com fundo preto e detalhes em branco"
                                 src="https://akamai.sscdn.co/uploadfile/letras/fotos/8/1/3/5/813556c803f983f27dbd97dca203db56.jpg"
                                 loading="lazy" />
                             <div class="caption">Emitê Único</div>
                         </div>
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 3 com fundo preto e detalhes em branco"
+                            <img alt="Retrato estilizado do artista Senndy com fundo preto e detalhes em branco"
                                 src="https://i.scdn.co/image/ab67616d0000b2732fd75d1268407938f81d193b" loading="lazy" />
                             <div class="caption">Senndy</div>
                         </div>
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 4 com fundo preto e detalhes em branco"
+                            <img alt="Retrato estilizado do artista Lenco Baller com fundo preto e detalhes em branco"
                                 src="https://images.genius.com/d4c6247e95f13ae97e90da8ebaa2e8f5.1000x1000x1.jpg"
                                 loading="lazy" />
                             <div class="caption">Lenco Baller</div>
                         </div>
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 4 com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406321930666054/481847759_18055105289480601_2579986342319049779_n.png?ex=680d313b&is=680bdfbb&hm=8fb703707f04fc15a85de0cbc870b5c24d75b4160e8285aad6959520038ff451&=&width=779&height=974"
+                            <img alt="Retrato estilizado do artista Dazzen com fundo preto e detalhes em branco"
+                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406321930666054/481847759_18055105289480601_2579986342319049779_n.png?width=779&height=974"
                                 loading="lazy" />
                             <div class="caption">Dazzen</div>
                         </div>
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 4 com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406414352416808/469906375_1223425362100695_8041380873810668277_n.png?ex=680d3151&is=680bdfd1&hm=cc2c16c52d57eba34815e67d973b00be8086880194c6cc71969d3412bbb91608&=&width=779&height=974"
+                            <img alt="Retrato estilizado do artista LSZ com fundo preto e detalhes em branco"
+                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406414352416808/469906375_1223425362100695_8041380873810668277_n.png?width=779&height=974"
                                 loading="lazy" />
                             <div class="caption">LSZ</div>
                         </div>
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 4 com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406510355583088/481267060_18056544623490743_6370694021818490092_n.png?ex=680d3168&is=680bdfe8&hm=56d3b691029773fb58f2e7cb79ed7ff7baf6a32de6a55f09cdb2701cbc7d5225&=&width=974&height=974"
+                            <img alt="Retrato estilizado do artista Lelo com fundo preto e detalhes em branco"
+                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406510355583088/481267060_18056544623490743_6370694021818490092_n.png?width=974&height=974"
                                 loading="lazy" />
                             <div class="caption">Lelo</div>
                         </div>
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 4 com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406626210775050/485017097_18494597986058957_4208813116893513908_n.png?ex=680d3183&is=680be003&hm=110e847ae71fdc527626b32c057e5a0523d4f297991858dda959412093b8554f&=&width=780&height=974"
+                            <img alt="Retrato estilizado do artista Nik com fundo preto e detalhes em branco"
+                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406626210775050/485017097_18494597986058957_4208813116893513908_n.png?width=780&height=974"
                                 loading="lazy" />
                             <div class="caption">Nik</div>
                         </div>
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 4 com fundo preto e detalhes em branco"
+                            <img alt="Retrato estilizado do artista Zion com fundo preto e detalhes em branco"
                                 src="https://images-ext-1.discordapp.net/external/N-CAqgxShxr-ZIbT0JSZfsmiunAhdVZkPRyRBytVZpc/%3Fstp%3Ddst-jpg_e35_tt6%26efg%3DeyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTgwMC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ%26_nc_ht%3Dinstagram.fnvt4-1.fna.fbcdn.net%26_nc_cat%3D109%26_nc_oc%3DQ6cZ2QFBfwbsJ9c3DsrlzVYrW_RS_AEHHFZxptmOn-QNN_it8hhcmhIu2L5nqaLzbzBFxVE%26_nc_ohc%3DhZabscuFVKAQ7kNvwGazYpu%26_nc_gid%3Dq86nBXKd6k97PstkTLHDRg%26edm%3DAPoiHPcBAAAA%26ccb%3D7-5%26ig_cache_key%3DMzI3NDU3MTkzNzc3MDU5OTk5NQ%253D%253D.3-ccb7-5%26oh%3D00_AfHu69AvMBQnC4LUg7AulBaRINnA4gvn75uYV70cnkKqWQ%26oe%3D6811C81F%26_nc_sid%3D22de04/https/instagram.fnvt4-1.fna.fbcdn.net/v/t51.29350-15/416959582_302183629481757_576608383613888725_n.jpg?width=779&height=974"
                                 loading="lazy" />
                             <div class="caption">Zion</div>
                         </div>
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 4 com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406692153757857/469023305_18322236637091092_3084859825999992854_n.png?ex=680d3193&is=680be013&hm=b128f1a3b17ba5c2f12c24ce3a52799d6775d83c2f1f6c5ae21e1d5973d267da&=&width=779&height=974"
+                            <img alt="Retrato estilizado do artista Buh com fundo preto e detalhes em branco"
+                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406692153757857/469023305_18322236637091092_3084859825999992854_n.png?width=779&height=974"
                                 loading="lazy" />
                             <div class="caption">Buh</div>
                         </div>
                         <div class="slide glass">
-                            <img alt="Retrato estilizado do artista 4 com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365405841435398174/image.png?ex=680d30c8&is=680bdf48&hm=d8ff1b932918acb152f6276a53d008d69df05c5868b325d1bfd0ac2b889abcb6&=&width=562&height=560"
+                            <img alt="Retrato estilizado do artista Tchutchub com fundo preto e detalhes em branco"
+                                src="https://media.discordapp.net/attachments/1353185480199377029/1365405841435398174/image.png?width=562&height=560"
                                 loading="lazy" />
                             <div class="caption">Tchutchub</div>
                         </div>
@@ -391,38 +380,31 @@
                 </button>
             </div>
         </section>
-
         <section id="lancamentos" class="space-y-12 max-w-7xl mx-auto">
-            <h2 class="text-5xl font-extrabold text-left tracking-wide pl-4 sm:pl-0">
-                Principais Notícias
-            </h2>
+            <h2 class="text-5xl font-extrabold text-left tracking-wide pl-4 sm:pl-0">Principais Notícias</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <article
                     class="glass rounded-3xl p-6 shadow-2xl transition-shadow hover:shadow-4xl flex flex-col items-center text-center">
                     <img alt="Capa do último lançamento da gravadora Salve Crazy Rec, arte abstrata em preto e branco"
                         class="rounded-3xl shadow-lg w-full h-64 object-cover mb-6" loading="lazy"
-                        src="https://media.discordapp.net/attachments/1353185480199377029/1365407915401416784/image.png?ex=680d32b7&is=680be137&hm=d6965e7fac363c0e798e29bbdc029f5773b91a12529da42991bb9126a36ee63f&=&width=573&height=572" />
-                    <h3 class="text-2xl font-extrabold mb-2">Ultimo lançamento "Corre?"</h3>
+                        src="https://media.discordapp.net/attachments/1353185480199377029/1365407915401416784/image.png?width=573&height=572" />
+                    <h3 class="text-2xl font-extrabold mb-2">Último lançamento "Corre?"</h3>
                     <p class="text-lg font-semibold text-white/80 mb-4">Tchutchub ft. Cassin</p>
                     <p class="text-base italic mb-6">Ouça já "CORRE?", Tchutchub em participação com Cassin.</p>
                     <a href="https://open.spotify.com/intl-pt/album/4JVzLzuenTLrUkFfeMrAUh?si=FZI09LwbSuy1T2e1j_WjLg"
-                        target="_blank" rel="noopener noreferrer" class="btn-glow w-full max-w-xs">
-                        Ouça Agora
-                    </a>
+                        target="_blank" rel="noopener noreferrer" class="btn-glow w-full max-w-xs">Ouça Agora</a>
                 </article>
                 <article
                     class="glass rounded-3xl p-6 shadow-2xl transition-shadow hover:shadow-4xl flex flex-col items-center text-center">
                     <img alt="Imagem promocional do show 1 com palco iluminado em tons de preto e branco"
                         class="rounded-3xl shadow-lg w-full h-64 object-cover mb-6" loading="lazy"
-                        src="https://media.discordapp.net/attachments/1353185480199377029/1365408436266729532/489869268_18501392656004062_288100784494449851_n.png?ex=680d3333&is=680be1b3&hm=40f2909bfcf2dc4bf7369820092d0787c941ff11b438f34f7be326eb155df0c5&=&width=780&height=974" />
-                    <h3 class="text-2xl font-extrabold mb-2">Ryu, The Runner</h3>
-                    <p class="text-lg font-semibold text-white/80 mb-4">07 de Junho, 2025</p>
+                        src="https://media.discordapp.net/attachments/1353185480199377029/1365408436266729532/489869268_18501392656004062_288100784494449851_n.png?width=780&height=974" />
+                    <h3 class="text-2xl font-extrabold mb-2">Ryu, o Corredor</h3>
+                    <p class="text-lg font-semibold text-white/80 mb-4">07 de junho de 2025</p>
                     <p class="text-base mb-6">Bar Da Opinião, Porto Alegre - RS (R. José do Patrocínio, 834 - Cidade
                         Baixa, Porto Alegre - RS, 90050-002) 18h30</p>
                     <a href="https://bileto.sympla.com.br/event/105037/d/312942/s/21324801" target="_blank"
-                        rel="noopener noreferrer" class="btn-glow w-full max-w-xs">
-                        Compre seu ingresso
-                    </a>
+                        rel="noopener noreferrer" class="btn-glow w-full max-w-xs">Compre seu ingresso</a>
                 </article>
                 <article
                     class="glass rounded-3xl p-6 shadow-2xl transition-shadow hover:shadow-4xl flex flex-col items-center text-center">
@@ -432,22 +414,15 @@
                     <h3 class="text-2xl font-extrabold mb-2">Emitê Único</h3>
                     <p class="text-lg font-semibold text-white/80 mb-4">Recorde</p>
                     <p class="text-base mb-6">Emitê Único é o artista com mais streamings somados no projeto "One The
-                        Radar Brazil"</p>
-                    <a href="#noticias" class="btn-glow w-full max-w-xs">
-                        Saiba Mais
-                    </a>
+                        Radar Brasil"</p>
+                    <a href="#noticias" class="btn-glow w-full max-w-xs">Saiba Mais</a>
                 </article>
             </div>
         </section>
-
         <section id="noticias" class="space-y-8 max-w-7xl mx-auto">
-            <h2 class="text-5xl font-extrabold text-center tracking-wide sm:pl-0">
-                Central De Fãs
-            </h2>
-            <p class="text-left text-gray-300 max-w-3xl mx-auto text-lg font-sans">
-                Fique por dentro das atualizações oficiais da marca e gravadora Salve Crazy através da central de fãs
-                oficial.
-            </p>
+            <h2 class="text-5xl font-extrabold text-center tracking-wide sm:pl-0">Central De Fãs</h2>
+            <p class="text-left text-gray-300 max-w-3xl mx-auto text-lg font-sans">Fique por dentro das novidades
+                oficiais da marca e gravadora Salve Crazy através da central de fãs oficial.</p>
             <div aria-label="Feed do Instagram Salve Crazy Rec"
                 class="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/20 glass">
                 <iframe aria-hidden="true" class="w-full h-[650px]" frameborder="0" loading="lazy" scrolling="no"
@@ -455,27 +430,20 @@
                     title="Feed do Instagram Salve Crazy QG"></iframe>
             </div>
         </section>
-
         <section id="contato" class="space-y-8 max-w-md mx-auto">
-            <h2 class="text-5xl font-extrabold text-center tracking-wide">
-                Fique por dentro
-            </h2>
-            <p class="text-center text-gray-300 text-lg font-sans">
-                Receba lançamentos, bastidores e notícias direto no seu e-mail.
-            </p>
+            <h2 class="text-5xl font-extrabold text-center tracking-wide">Fique por dentro</h2>
+            <p class="text-center text-gray-300 text-lg font-sans">Receba lançamentos, bastidores e notícias direto no
+                seu e-mail.</p>
             <form action="https://www.instagram.com/salvecrazyrec/" aria-label="Formulário de inscrição para newsletter"
                 class="flex flex-col sm:flex-row gap-4 glass rounded-3xl p-6 shadow-lg" method="POST">
                 <input aria-label="Digite seu e-mail" aria-required="true"
-                    class="flex-grow px-5 py-4 rounded-3xl text-black text-lg focus:outline-none focus:ring-2 focus:ring-white transition"
+                    class="flex-grow px-5 py-4 rounded-3xl text-black text-lg focus:outline-none focus:ring-2 focus:transition ring-white"
                     name="email" placeholder="Digite seu e-mail" required="" type="email" />
                 <button aria-label="Enviar inscrição para newsletter" class="btn-glow w-full sm:w-auto text-center"
-                    type="submit">
-                    Enviar
-                </button>
+                    type="submit">Enviar</button>
             </form>
         </section>
     </main>
-
     <footer class="bg-black bg-opacity-80 text-gray-400 py-12 mt-auto glass">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left select-none">
             <div>
@@ -483,31 +451,17 @@
                     height="90" loading="lazy"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKRhxOAehQdseMnefShwKOBqQNmz9libfwCA&s"
                     width="60" />
-                <p class="text-sm max-w-xs mx-auto md:mx-0 font-sans">
-                    © 2025 Salve Crazy Rec. Todos os direitos reservados.
-                </p>
+                <p class="text-sm max-w-xs mx-auto md:mx-0 font-sans">© 2025 Salve Crazy Rec. Todos os direitos
+                    reservados.</p>
             </div>
             <div>
-                <h3 class="font-semibold mb-4 text-white">
-                    Informações
-                </h3>
-                <p class="mb-2 font-sans">
-                    CNPJ
-                    <a class="hover:text-gray-400" href="">
-                        49.948.386/0001-57
-                    </a>
-                </p>
-                <p class="font-sans">
-                    Merch
-                    <a class="hover:text-gray-400" href="https://salvecrazy.com">
-                        Salvecrazy.com
-                    </a>
-                </p>
+                <h3 class="font-semibold mb-4 text-white">Informações</h3>
+                <p class="mb-2 font-sans">CNPJ <a class="hover:text-gray-400" href="">49.948.386/0001-57</a></p>
+                <p class="font-sans">Loja <a class="hover:text-gray-400"
+                        href="https://salvecrazy.com">Salvecrazy.com</a></p>
             </div>
             <div>
-                <h3 class="font-semibold mb-4 text-white">
-                    Siga-nos
-                </h3>
+                <h3 class="font-semibold mb-4 text-white">Siga-nos</h3>
                 <div class="flex justify-center md:justify-start space-x-6 text-2xl">
                     <a aria-label="Instagram" class="hover:text-gray-400" href="https://www.instagram.com/salvecrazyrec"
                         rel="noopener" target="_blank">
@@ -529,12 +483,10 @@
             </div>
         </div>
     </footer>
-
     <script>
         // Mobile menu toggle logic
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
-
         menuToggle.addEventListener('click', () => {
             const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
             if (expanded) {
@@ -549,8 +501,7 @@
                 menuToggle.innerHTML = '<i class="fas fa-times fa-lg"></i>';
             }
         });
-
-        // Close mobile menu on link click (for better UX)
+        // Close mobile menu on link click for better UX
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.style.maxHeight = '0';
@@ -580,25 +531,20 @@
                     dot.classList.toggle("bg-white/50", i !== index);
                 });
             }
-
             function nextSlide() {
                 updateSlider(currentIndex + 1);
             }
-
             function prevSlideFunc() {
                 updateSlider(currentIndex - 1);
             }
-
             prevBtn.addEventListener("click", () => {
                 prevSlideFunc();
                 resetInterval();
             });
-
             nextBtn.addEventListener("click", () => {
                 nextSlide();
                 resetInterval();
             });
-
             dots.forEach((dot) => {
                 dot.addEventListener("click", () => {
                     const slideIndex = parseInt(dot.getAttribute("data-slide"));
@@ -606,16 +552,13 @@
                     resetInterval();
                 });
             });
-
             function startInterval() {
                 interval = setInterval(nextSlide, 5000);
             }
-
             function resetInterval() {
                 clearInterval(interval);
                 startInterval();
             }
-
             updateSlider(0);
             startInterval();
         })();
@@ -630,7 +573,8 @@
             let currentIndex = 0;
 
             function updateCarousel() {
-                const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
+                const slideStyle = getComputedStyle(slides[0]);
+                const slideWidth = slides[0].offsetWidth + parseInt(slideStyle.marginRight);
                 slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
             }
 
@@ -640,13 +584,20 @@
             });
 
             nextBtn.addEventListener('click', () => {
-                currentIndex = Math.min(currentIndex + 1, slideCount - 3);
+                // Calculate how many slides are visible based on viewport width
+                let visibleSlides = 3;
+                if (window.innerWidth <= 480) visibleSlides = 1;
+                else if (window.innerWidth <= 768) visibleSlides = 2;
+                currentIndex = Math.min(currentIndex + 1, slideCount - visibleSlides);
                 updateCarousel();
             });
 
             window.addEventListener('resize', () => {
-                if (currentIndex > slideCount - 3) {
-                    currentIndex = Math.max(slideCount - 3, 0);
+                let visibleSlides = 3;
+                if (window.innerWidth <= 480) visibleSlides = 1;
+                else if (window.innerWidth <= 768) visibleSlides = 2;
+                if (currentIndex > slideCount - visibleSlides) {
+                    currentIndex = Math.max(slideCount - visibleSlides, 0);
                     updateCarousel();
                 }
             });
