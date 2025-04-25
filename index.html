@@ -35,7 +35,6 @@
             color: #a0aec0;
         }
 
-        /* Transparent glass effect */
         .glass {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: saturate(180%) blur(10px);
@@ -43,12 +42,6 @@
             transition: background 0.3s ease, border-color 0.3s ease;
         }
 
-        .glass:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        /* Button with subtle glow and smooth scale */
         .btn-glow {
             background: rgba(255, 255, 255, 0.1);
             border: 2px solid #ffffff;
@@ -58,34 +51,16 @@
             border-radius: 9999px;
             box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
-            backdrop-filter: saturate(180%) blur(8px);
             cursor: pointer;
-            user-select: none;
             display: inline-block;
             text-align: center;
-            font-family: 'Montserrat', sans-serif;
             font-size: 1.125rem;
-            letter-spacing: 0.05em;
         }
 
-        .btn-glow:hover,
-        .btn-glow:focus {
+        .btn-glow:hover {
             background: rgba(255, 255, 255, 0.25);
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-            color: #e2e8f0;
             transform: scale(1.05);
-            outline: none;
-        }
-
-        /* Header nav link hover */
-        nav a:hover {
-            color: #a0aec0;
-        }
-
-        /* Mobile menu toggle */
-        #mobile-menu {
-            transition: max-height 0.4s ease;
-            overflow: hidden;
         }
 
         /* Carousel styles */
@@ -98,11 +73,10 @@
         #artist-carousel .slides {
             display: flex;
             transition: transform 0.5s ease;
-            will-change: transform;
         }
 
         #artist-carousel .slide {
-            flex: 0 0 calc(33.3333% - 1rem);
+            flex: 0 0 33.3333%;
             margin-right: 1rem;
             border-radius: 1rem;
             overflow: hidden;
@@ -116,99 +90,31 @@
             margin-right: 0;
         }
 
-        #artist-carousel .slide:hover {
-            transform: scale(1.05);
-        }
-
         #artist-carousel .slide img {
             width: 100%;
             height: auto;
             object-fit: cover;
-            display: block;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
         }
 
-        #artist-carousel .slide .caption {
-            padding: 0.75rem 1rem;
-            text-align: center;
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: white;
-            user-select: none;
-        }
-
-        /* Carousel buttons */
-        #artist-carousel button.carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.6);
-            border: none;
-            color: white;
-            padding: 0.5rem 0.75rem;
-            border-radius: 9999px;
-            cursor: pointer;
-            z-index: 10;
-            transition: background-color 0.3s ease;
-        }
-
-        #artist-carousel button.carousel-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        #artist-carousel button#artist-prev {
-            left: 0.5rem;
-        }
-
-        #artist-carousel button#artist-next {
-            right: 0.5rem;
-        }
-
-        /* Responsive text sizes */
         @media (max-width: 768px) {
-
-            h2,
-            h3,
-            h4 {
-                font-size: clamp(1.5rem, 4vw, 2rem);
-            }
-
             #artist-carousel .slide {
-                flex: 0 0 calc(50% - 1rem);
-            }
-
-            #artist-carousel .slide img {
-                height: auto;
+                flex: 0 0 50%;
             }
         }
 
         @media (max-width: 480px) {
-
-            h2,
-            h3,
-            h4 {
-                font-size: clamp(1.25rem, 5vw, 1.75rem);
-            }
-
             #artist-carousel .slide {
                 flex: 0 0 100%;
                 margin-right: 0;
             }
-
-            #artist-carousel button.carousel-btn {
-                display: none;
-            }
         }
     </style>
-
-
-
+</head>
 
 <body class="flex flex-col min-h-screen bg-black text-white">
-    <!-- Header -->
     <header class="fixed top-0 left-0 right-0 bg-black bg-opacity-70 backdrop-blur-md z-50 shadow-lg glass">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-            <a class="flex items-center space-x-3 select-none" href="#">
+            <a class="flex items-center space-x-3 select-none " href="#">
                 <img alt="Logotipo da gravadora Salve Crazy Rec em preto e branco" class="h-12 w-auto" height="50"
                     loading="lazy"
                     src="https://yt3.googleusercontent.com/vuzaZuFisqDWCTKBuddJ2iLHBue9PpKAo1zTJjTN2gx3YLhYckeAT_mK-eYLBoAfrMFpVaVN=s900-c-k-c0x00ffffff-no-rj"
@@ -223,7 +129,7 @@
                     <li><a class="hover:text-gray-400" href="#lancamentos">Lançamentos</a></li>
                     <li><a class="hover:text-gray-400" href="#shows">Shows</a></li>
                     <li><a class="hover:text-gray-400" href="#noticias">Central De Fãs</a></li>
-                    <li <a class="block hover:text-gray-400" href="https://salvecrazy.com">Merch</a></li>
+                    <li><a class="block hover:text-gray-400" href="https://salvecrazy.com">Merch</a></li>
                     <li><a class="hover:text-gray-400" href="#contato">Contato</a></li>
                 </ul>
                 <button aria-expanded="false" aria-label="Abrir menu"
@@ -247,7 +153,6 @@
     </header>
 
     <main class="pt-24 flex-grow space-y-32 max-w-7xl mx-auto px-4 sm:px-6 md:px-0">
-        <!-- Slider Section -->
         <section aria-label="Destaque Salve Crazy Rec" class="relative rounded-xl overflow-hidden shadow-2xl">
             <div class="relative w-full overflow-hidden rounded-xl" id="slider">
                 <div class="flex transition-transform duration-700 ease-in-out" id="slides">
@@ -279,7 +184,7 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-10 sm:p-16 rounded-xl">
                             <h1
-                                class="text-5xl sm:text- 6xl md:text-7xl font-extrabold text-white drop-shadow-lg max-w-4xl tracking-wide">
+                                class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white drop-shadow-lg max-w-4xl tracking-wide">
                                 Ryu, The Runner em Porto Alegre
                             </h1>
                             <p class="mt-6 text-xl sm:text-2xl text-gray-300 max-w-3xl drop-shadow-md font-sans">
@@ -326,10 +231,9 @@
                         class="w-3 h-3 rounded-full bg-white/50 hover:bg-white focus:outline-none focus:ring-2 focus:ring-white"
                         data-slide="2"></button>
                 </div>
-            </div>
+                </ div>
         </section>
 
-        <!-- Artistas Carousel Section -->
         <section id="artistas" class="space-y-12 relative">
             <h2 class="text-5xl font-extrabold text-center tracking-wide max-w-7xl mx-auto">
                 Nossos Artistas
@@ -347,7 +251,7 @@
                         </div>
                         <div class="slide">
                             <img alt="Retrato estilizado do artista 2 com fundo preto e detalhes em branco"
-                                src="https:// akamai.sscdn.co/uploadfile/letras/fotos/8/1/3/5/813556c803f983f27dbd97dca203db56.jpg"
+                                src="https://akamai.sscdn.co/uploadfile/letras/fotos/8/1/3/5/813556c803f983f27dbd97dca203db56.jpg"
                                 loading="lazy" />
                             <div class="caption">Emitê Único</div>
                         </div>
@@ -368,48 +272,6 @@
                                 loading="lazy" />
                             <div class="caption">Cassin</div>
                         </div>
-                        <div class="slide">
-                            <img alt="Retrato estilizado do artista Dazzen com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406321930666054/481847759_18055105289480601_2579986342319049779_n.png?ex=680d313b&is=680bdfbb&hm=8fb703707f04fc15a85de0cbc870b5c24d75b4160e8285aad6959520038ff451&=&width=779&height=974"
-                                loading="lazy" />
-                            <div class="caption">Dazzen</div>
-                        </div>
-                        <div class="slide">
-                            <img alt="Retrato estilizado do artista LSZ com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406414352416808/469906375_1223425362100695_8041380873810668277_n.png?ex=680d3151&is=680bdfd1&hm=cc2c16c52d57eba34815e67d973b00be8086880194c6cc71969d3412bbb91608&=&width=779&height=974"
-                                loading="lazy" />
-                            <div class="caption">LSZ</div>
-                        </div>
-                        <div class="slide">
-                            <img alt="Retrato estilizado do artista Lelo com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406510355583088/481267060_18056544623490743_6370694021818490092_n.png?ex=680d3168&is=680bdfe8&hm=56d3b691029773fb58f2e7cb79ed7ff7baf6a32de6a55f09cdb2701cbc7d5225&=&width=974&height=974"
-                                loading="lazy" />
-                            <div class="caption">Lelo</div>
-                        </div>
-                        <div class="slide">
-                            <img alt="Retrato estilizado do artista Nik com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406626210775050/485017097_18494597986058957_4208813116893513908_n.png?ex=680d3183&is=680be003&hm=110e847ae71fdc527626b32c057e5a0523d4f297991858dda959412093b8554f&=&width=780&height=974"
-                                loading="lazy" />
-                            <div class="caption">Nik</div>
-                        </div>
-                        <div class="slide">
-                            <img alt="Retrato estilizado do artista Buh com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/136540669215375 7857/469023305_18322236637091092_3084859825999992854_n.png?ex=680d3193&is=680be013&hm=b128f1a3b17ba5c2f12c24ce3a52799d6775d83c2f1f6c5ae21e1d5973d267da&=&width=779&height=974"
-                                loading="lazy" />
-                            <div class="caption">Buh</div>
-                        </div>
-                        <div class="slide">
-                            <img alt="Retrato estilizado do artista Zion com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365406692153757857/469023305_18322236637091092_3084859825999992854_n.png?ex=680d3193&is=680be013&hm=b128f1a3b17ba5c2f12c24ce3a52799d6775d83c2f1f6c5ae21e1d5973d267da&=&width=779&height=974"
-                                loading="lazy" />
-                            <div class="caption">Zion</div>
-                        </div>
-                        <div class="slide">
-                            <img alt="Retrato estilizado do artista Tchutchub com fundo preto e detalhes em branco"
-                                src="https://media.discordapp.net/attachments/1353185480199377029/1365405841435398174/image.png?ex=680d30c8&is=680bdf48&hm=d8ff1b932918acb152f6276a53d008d69df05c5868b325d1bfd0ac2b889abcb6&=&width=562&height=560"
-                                loading="lazy" />
-                            <div class="caption">Tchutchub</div>
-                        </div>
                     </div>
                 </div>
                 <button id="artist-next" class="carousel-btn" aria-label="Próximo artista">
@@ -418,7 +280,6 @@
             </div>
         </section>
 
-        <!-- Último Lançamento Section -->
         <section id="lancamentos" class="space-y-12 max-w-7xl mx-auto">
             <h2 class="text-5xl font-extrabold text-left tracking-wide pl-4 sm:pl-0">
                 Último Lançamento
@@ -432,7 +293,7 @@
                     <h3 class="text-2xl font-extrabold mb-2">Corre?</h3>
                     <p class="text-lg font-semibold text-white/80 mb-4">Tchutchub ft. Cassin</p>
                     <p class="text-base italic mb-6">Ouça já "CORRE?", Tchutchub em participação com Cassin.</p>
-                    <a href="https://open.spotify.com/intl-pt/album/4JVzLzuenTLrUkFfeMrAUh?si=FZI09LwbSuy1T2e1j_WjLg"
+                    <a href="https://open.spotify.com/intl-pt/album/4JVzLzuenTLrUkFfeMrAUh?si=F ZI09LwbSuy1T2e1j_WjLg"
                         target="_blank" rel="noopener noreferrer" class="btn-glow w-full max-w-xs">
                         Ouça Agora
                     </a>
@@ -441,7 +302,7 @@
                     class="glass rounded-3xl p-6 shadow-2xl transition-shadow hover:shadow-4xl flex flex-col items-center text-center">
                     <img alt="Imagem promocional do show 1 com palco iluminado em tons de preto e branco"
                         class="rounded-3xl shadow-lg w-full h-64 object-cover mb-6" loading="lazy"
-                        src="https://media.discordapp.net/attachments/1353185480199377029/1365408436266729532/489 869268_18501392656004062_288100784494449851_n.png?ex=680d3333&is=680be1b3&hm=40f2909bfcf2dc4bf7369820092d0787c941ff11b438f34f7be326eb155df0c5&=&width=780&height=974" />
+                        src="https://media.discordapp.net/attachments/1353185480199377029/1365408436266729532/489869268_18501392656004062_288100784494449851_n.png?ex=680d3333&is=680be1b3&hm=40f2909bfcf2dc4bf7369820092d0787c941ff11b438f34f7be326eb155df0c5&=&width=780&height=974" />
                     <h3 class="text-2xl font-extrabold mb-2">Ryu, The Runner</h3>
                     <p class="text-lg font-semibold text-white/80 mb-4">07 de Junho, 2025</p>
                     <p class="text-base mb-6">Bar Da Opinião, Porto Alegre - RS</p>
@@ -465,7 +326,6 @@
             </div>
         </section>
 
-        <!-- Últimas Notícias Section -->
         <section id="noticias" class="space-y-8 max-w-7xl mx-auto">
             <h2 class="text-5xl font-extrabold text-left tracking-wide pl-4 sm:pl-0">
                 Central De Fãs
@@ -482,7 +342,6 @@
             </div>
         </section>
 
-        <!-- Newsletter Section -->
         <section id="contato" class="space-y-8 max-w-md mx-auto">
             <h2 class="text-5xl font-extrabold text-center tracking-wide">
                 Fique por dentro
@@ -503,7 +362,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-black bg-opacity-80 text-gray-400 py-12 mt-auto glass">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left select-none">
             <div>
@@ -604,13 +462,8 @@
                 currentIndex = index;
                 slides.style.transform = `translateX(-${index * 100}%)`;
                 dots.forEach((dot, i) => {
-                    if (i === index) {
-                        dot.classList.remove("bg-white/50");
-                        dot.classList.add("bg-white");
-                    } else {
-                        dot.classList.add("bg-white/50");
-                        dot.classList.remove("bg-white");
-                    }
+                    dot.classList.toggle("bg-white", i === index);
+                    dot.classList.toggle("bg-white/50", i !== index);
                 });
             }
 
@@ -641,9 +494,7 @@
             });
 
             function startInterval() {
-                interval = setInterval(() => {
-                    nextSlide();
-                }, 5000);
+                interval = setInterval(nextSlide, 5000);
             }
 
             function resetInterval() {
@@ -662,7 +513,6 @@
             const prevBtn = document.getElementById('artist-prev');
             const nextBtn = document.getElementById('artist-next');
             const slideCount = slides.length;
-            const visibleSlides = 3;
             let currentIndex = 0;
 
             function updateCarousel() {
@@ -676,19 +526,11 @@
             });
 
             nextBtn.addEventListener('click', () => {
-                currentIndex = Math.min(currentIndex + 1, slideCount - visibleSlides);
+                currentIndex = Math.min(currentIndex + 1, slideCount - 1);
                 updateCarousel();
             });
 
-            // On window resize, reset carousel position if needed
-            window.addEventListener('resize', () => {
-                if (currentIndex > slideCount - visibleSlides) {
-                    currentIndex = Math.max(slideCount - visibleSlides, 0);
-                    updateCarousel();
-                }
-            });
-
-            // Initialize
+            window.addEventListener('resize', updateCarousel);
             updateCarousel();
         })();
     </script>
