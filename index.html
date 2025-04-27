@@ -17,6 +17,7 @@
             margin: 0;
             min-height: 100vh;
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         a {
@@ -60,6 +61,7 @@
             border-bottom: 1px solid rgba(255 255 255 / 0.2);
             border-radius: 0 0 1rem 1rem;
             user-select: none;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
         #logo-img {
@@ -103,6 +105,7 @@
             border-top: 1px solid rgba(255 255 255 / 0.2);
             user-select: none;
             border-radius: 0 0 1rem 1rem;
+            transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         #mobile-menu a {
@@ -147,6 +150,7 @@
             overflow: hidden;
             box-shadow: 0 0 30px rgba(255 255 255 / 0.25);
             user-select: none;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
         .slides {
@@ -188,6 +192,7 @@
             letter-spacing: 0.05em;
             box-shadow: 0 0 10px rgba(0 0 0 / 0.7);
             user-select: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .slider-btn {
@@ -249,6 +254,7 @@
             margin: 3rem auto 4rem;
             padding: 0 1rem;
             user-select: none;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
         /* Categories container: flex with main categories and dropdown */
@@ -328,6 +334,7 @@
             z-index: 100;
             display: none;
             flex-direction: column;
+            transition: background-color 0.3s ease;
         }
 
         .artist-dropdown-list.show {
@@ -357,6 +364,7 @@
             overflow: hidden;
             border-radius: 1.5rem;
             box-shadow: 0 0 25px rgba(255 255 255 / 0.3);
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
         .artists-track {
@@ -479,6 +487,7 @@
             margin-bottom: 1.5rem;
             box-shadow: 0 0 30px rgba(255 255 255 / 0.4);
             user-select: none;
+            transition: box-shadow 0.3s ease;
         }
 
         .artist-details h3 {
@@ -502,6 +511,7 @@
             max-width: 1200px;
             margin: 0 auto 4rem;
             padding: 0 1rem;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
         .news-section h2 {
@@ -647,6 +657,12 @@
             user-select: text;
             box-shadow: 0 0 8px rgba(255 255 255 / 0.3);
             transition: box-shadow 0.3s ease;
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .newsletter input[type="email"]::placeholder {
+            color: #a0aec0;
         }
 
         .newsletter input[type="email"]:focus {
@@ -678,6 +694,7 @@
             margin: 0 auto 4rem;
             padding: 0 1rem;
             user-select: none;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
         .fan-center h2 {
@@ -705,6 +722,7 @@
             box-shadow: 0 0 25px rgba(255 255 255 / 0.3);
             backdrop-filter: saturate(180%) blur(10px);
             user-select: none;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
         /* Responsive */
@@ -785,6 +803,7 @@
 
         footer {
             padding: 2rem 1rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
         .footer-content {
@@ -828,6 +847,345 @@
         .social-icons a:hover {
             color: #a0aec0;
         }
+
+        /* Dark mode styles */
+        body.light {
+            background-color: #f9fafb;
+            color: #1a202c;
+        }
+
+        body.light a {
+            color: #1a202c;
+        }
+
+        body.light a:hover {
+            color: #4a5568;
+        }
+
+        body.light .glass {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0 0 0 / 0.1);
+            color: #1a202c;
+        }
+
+        body.light .glass:hover {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 30px rgba(0 0 0 / 0.15);
+        }
+
+        body.light header {
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 0 15px rgba(0 0 0 / 0.1);
+            border-color: rgba(0, 0, 0, 0.1);
+            color: #1a202c;
+        }
+
+        body.light #mobile-menu {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0 0 0 / 0.1);
+            color: #1a202c;
+        }
+
+        body.light nav ul li a,
+        body.light #mobile-menu a {
+            color: #1a202c;
+        }
+
+        body.light nav ul li a.active,
+        body.light nav ul li a:hover,
+        body.light #mobile-menu a:hover {
+            background-color: rgba(0 0 0 / 0.1);
+        }
+
+        body.light .slider-container {
+            box-shadow: 0 0 30px rgba(0 0 0 / 0.1);
+        }
+
+        body.light .slide-text {
+            background: rgba(255 255 255 / 0.85);
+            color: #1a202c;
+            box-shadow: 0 0 10px rgba(255 255 255 / 0.7);
+        }
+
+        body.light .slider-btn {
+            background: rgba(0 0 0 / 0.1);
+            border-color: #1a202c;
+            color: #1a202c;
+        }
+
+        body.light .slider-btn:hover {
+            background: rgba(0 0 0 / 0.2);
+            box-shadow: 0 0 20px rgba(0 0 0 / 0.3);
+        }
+
+        body.light .dots .dot {
+            background: rgba(0 0 0 / 0.3);
+        }
+
+        body.light .dots .dot.active {
+            background: #1a202c;
+        }
+
+        body.light .artists-section,
+        body.light .artists-carousel,
+        body.light .news-section,
+        body.light .fan-center,
+        body.light footer,
+        body.light .newsletter {
+            background: #fff;
+            box-shadow: 0 0 25px rgba(0 0 0 / 0.1);
+            border-color: rgba(0, 0, 0, 0.1);
+            color: #1a202c;
+        }
+
+        body.light .artist-card {
+            background: rgba(0 0 0 / 0.05);
+            box-shadow: 0 0 15px rgba(0 0 0 / 0.1);
+            color: #1a202c;
+        }
+
+        body.light .artist-card:hover {
+            box-shadow: 0 0 40px rgba(0 0 0 / 0.15);
+        }
+
+        body.light .artist-name {
+            color: #1a202c;
+        }
+
+        body.light .artist-details {
+            background: #fff;
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 25px rgba(0 0 0 / 0.1);
+            color: #1a202c;
+        }
+
+        body.light .artist-details h3 {
+            color: #1a202c;
+        }
+
+        body.light .artist-details p {
+            color: #4a5568;
+        }
+
+        body.light .news-card {
+            background: rgba(0 0 0 / 0.05);
+            box-shadow: 0 0 20px rgba(0 0 0 / 0.1);
+            color: #1a202c;
+        }
+
+        body.light .news-card:hover {
+            background: rgba(0 0 0 / 0.1);
+            box-shadow: 0 0 50px rgba(0 0 0 / 0.15);
+        }
+
+        body.light .news-card h3 {
+            color: #1a202c;
+        }
+
+        body.light .news-card p.subtitle {
+            color: #718096;
+        }
+
+        body.light .news-card p.description {
+            color: #718096;
+        }
+
+        body.light .btn-glow {
+            background: rgba(0 0 0 / 0.05);
+            border-color: #1a202c;
+            color: #1a202c;
+            box-shadow: 0 0 8px rgba(0 0 0 / 0.1);
+        }
+
+        body.light .btn-glow:hover {
+            background: rgba(0 0 0 / 0.1);
+            box-shadow: 0 0 20px rgba(0 0 0 / 0.15);
+        }
+
+        body.light .newsletter {
+            background: #fff;
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 25px rgba(0 0 0 / 0.1);
+            color: #1a202c;
+        }
+
+        body.light .newsletter p {
+            color: #718096;
+        }
+
+        body.light .newsletter input[type="email"] {
+            background-color: #f7fafc;
+            color: #1a202c;
+            box-shadow: 0 0 8px rgba(0 0 0 / 0.1);
+        }
+
+        body.light .newsletter input[type="email"]::placeholder {
+            color: #a0aec0;
+        }
+
+        body.light .newsletter input[type="email"]:focus {
+            box-shadow: 0 0 20px rgba(0 0 0 / 0.15);
+        }
+
+        body.light .newsletter button {
+            background: rgba(0 0 0 / 0.05);
+            border-color: #1a202c;
+            color: #1a202c;
+            box-shadow: 0 0 8px rgba(0 0 0 / 0.1);
+        }
+
+        body.light .newsletter button:hover {
+            background: rgba(0 0 0 / 0.1);
+            box-shadow: 0 0 30px rgba(0 0 0 / 0.15);
+        }
+
+        body.light .fan-center {
+            background: #fff;
+            box-shadow: 0 0 25px rgba(0 0 0 / 0.1);
+            color: #1a202c;
+        }
+
+        body.light .fan-center p {
+            color: #718096;
+        }
+
+        body.light .fan-center iframe {
+            box-shadow: 0 0 25px rgba(0 0 0 / 0.1);
+        }
+
+        body.light footer {
+            background: #fff;
+            box-shadow: 0 0 25px rgba(0 0 0 / 0.1);
+            border-color: rgba(0, 0, 0, 0.1);
+            color: #1a202c;
+        }
+
+        body.light .footer-section h3 {
+            color: #1a202c;
+        }
+
+        body.light .footer-section p {
+            color: #718096;
+        }
+
+        body.light .social-icons a {
+            color: #1a202c;
+        }
+
+        body.light .social-icons a:hover {
+            color: #4a5568;
+        }
+
+        /* Switch styles from Uiverse.io by andrew-demchenk0 */
+        .switch {
+            font-size: 17px;
+            position: relative;
+            display: inline-block;
+            width: 64px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #73C0FC;
+            transition: .4s;
+            border-radius: 30px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 30px;
+            border-radius: 20px;
+            left: 2px;
+            bottom: 2px;
+            z-index: 2;
+            background-color: #e8e8e8;
+            transition: .4s;
+        }
+
+        .sun svg {
+            position: absolute;
+            top: 6px;
+            left: 36px;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+            fill: #ffd43b;
+        }
+
+        .moon svg {
+            fill: #73C0FC;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+        }
+
+        .switch:hover .sun svg {
+            animation: rotate 15s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .switch:hover .moon svg {
+            animation: tilt 5s linear infinite;
+        }
+
+        @keyframes tilt {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            75% {
+                transform: rotate(10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .input:checked+.slider {
+            background-color: #183153;
+        }
+
+        .input:focus+.slider {
+            box-shadow: 0 0 1px #183153;
+        }
+
+        .input:checked+.slider:before {
+            transform: translateX(30px);
+        }
     </style>
 </head>
 
@@ -839,9 +1197,10 @@
                 alt="Ícone de nota musical branca em fundo transparente representando a gravadora Salve Crazy Rec"
                 loading="lazy" />
         </a>
-        <nav role="navigation" aria-label="Menu principal">
+        <nav role="navigation" aria-label="Menu principal" class="flex items-center gap-4">
             <ul id="desktop-menu">
                 <li><a href="https://salvecrazy.com" class="glass px-3 py-1">Loja</a></li>
+                <li><a href="producoes.html" class="glass px-3 py-1">Produções</a></li>
                 <li><a href="#noticias" class="glass px-3 py-1">Últimas Notícias</a></li>
                 <li><a href="#shows" class="glass px-3 py-1">Shows</a></li>
                 <li><a href="#fan-center" class="glass px-3 py-1">Central de Fãs</a></li>
@@ -852,11 +1211,30 @@
             </button>
             <div aria-hidden="true" id="mobile-menu" class="glass" role="menu">
                 <a href="https://salvecrazy.com" role="menuitem" class="glass px-3 py-2 rounded-md">Loja</a>
+                <a href="/producoes.html" role="menuitem" class="glass px-3 py-2 rounded-md">Produções</a>
                 <a href="#noticias" role="menuitem" class="glass px-3 py-2 rounded-md">Últimas Notícias</a>
                 <a href="#shows" role="menuitem" class="glass px-3 py-2 rounded-md">Shows</a>
                 <a href="#fan-center" role="menuitem" class="glass px-3 py-2 rounded-md">Central de Fãs</a>
                 <a href="#contato" role="menuitem" class="glass px-3 py-2 rounded-md">Contato</a>
             </div>
+            <!-- Dark mode toggle switch -->
+            <label class="switch" aria-label="Alternar modo claro e escuro" tabindex="0">
+                <span class="sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g fill="#ffd43b">
+                            <circle r="5" cy="12" cx="12"></circle>
+                            <path
+                                d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z">
+                            </path>
+                        </g>
+                    </svg></span>
+                <span class="moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                        </path>
+                    </svg></span>
+                <input type="checkbox" class="input" id="dark-mode-toggle" aria-checked="false" role="switch" />
+                <span class="slider"></span>
+            </label>
         </nav>
     </header>
 
@@ -1144,7 +1522,6 @@
         // Mobile menu toggle
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
-        // Ensure mobile menu is hidden on load
         mobileMenu.style.display = 'none';
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
@@ -1414,6 +1791,44 @@
             // Initialize with "Principais" selected
             mainCategoryButtons[0].click();
         })();
+
+        // Dark mode toggle logic
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        // Load saved mode from localStorage or default to dark
+        const savedMode = localStorage.getItem('mode');
+        if (savedMode === 'light') {
+            body.classList.add('light');
+            darkModeToggle.checked = true;
+            darkModeToggle.setAttribute('aria-checked', 'true');
+        } else {
+            body.classList.remove('light');
+            darkModeToggle.checked = false;
+            darkModeToggle.setAttribute('aria-checked', 'false');
+        }
+
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('light');
+                darkModeToggle.setAttribute('aria-checked', 'true');
+                localStorage.setItem('mode', 'light');
+            } else {
+                body.classList.remove('light');
+                darkModeToggle.setAttribute('aria-checked', 'false');
+                localStorage.setItem('mode', 'dark');
+            }
+        });
+
+        // Accessibility: allow toggle switch label to toggle checkbox on Enter/Space
+        const switchLabel = darkModeToggle.closest('label.switch');
+        switchLabel.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                darkModeToggle.checked = !darkModeToggle.checked;
+                darkModeToggle.dispatchEvent(new Event('change'));
+            }
+        });
     </script>
 </body>
 
